@@ -106,12 +106,10 @@
 .owl-carousel.owl-rtl .owl-item {
     float: right;
 }
-
 /* No Js */
 .no-js .owl-carousel {
     display: block;
 }
-
 /*
  *  Owl Carousel - Animate Plugin
  */
@@ -143,7 +141,6 @@
 .owl-height {
     transition: height 500ms ease-in-out;
 }
-
 /*
  * 	Owl Carousel - Lazy Load Plugin
  */
@@ -154,7 +151,6 @@
 .owl-carousel .owl-item img.owl-lazy {
     transform-style: preserve-3d;
 }
-
 /*
  * 	Owl Carousel - Video Plugin
  */
@@ -539,4 +535,76 @@ a[href$=".pdf"][target="_blank"]:after {
     letter-spacing: 1.5px;
     font-weight: 400;
     line-height: 22px;
+}
+
+/* Isomer Navbar custom theme */
+.navbar { 
+    min-height: 6.25rem
+}
+.navbar .navbar-item .selector.active {
+    background-color: #6b4370;
+}
+.navbar .navbar-item img {
+    max-height: none;
+}
+
+.navbar .navbar-item.is-search-bar {
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    margin: 0;
+    padding: 0.5rem 1.5rem;
+}
+.navbar .navbar-item:hover a {
+    color: #6b4370;
+}
+.navbar .navbar-item:hover a.sub-link {
+    color: #484848;
+}
+
+.navbar-item .selector {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 5px;
+}
+.navbar-item .selector.active {
+    background-color: #0487bf;
+}
+.navbar-item img {
+    max-height: none;
+}
+.navbar-item.is-search-bar {
+    border-top: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    margin: 0;
+    padding: 0.5rem 1.5rem;
+}
+
+.navbar-item.is-mega {
+    position: static;
+}
+.navbar-item.is-mega .navbar-item {
+    padding-left: 0;
+}
+
+.navbar-item.is-mega .is-mega-menu-title {
+    margin-bottom: 0;
+    padding: 0.375rem 1.5rem;
+    color: #6b4370;
+}
+.navbar-dropdown {
+    border-radius: 0;
+    box-shadow: 2px 4px 16px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+@media screen and (max-width: 1023px) {
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+}
+
+@media screen and (min-width: 1280px) {
 }
