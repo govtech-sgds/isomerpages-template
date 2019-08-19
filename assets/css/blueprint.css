@@ -538,73 +538,45 @@ a[href$=".pdf"][target="_blank"]:after {
 }
 
 /* Isomer Navbar custom theme */
-.navbar { 
-    min-height: 6.25rem
-}
-.navbar .navbar-item .selector.active {
-    background-color: #6b4370;
-}
-.navbar .navbar-item img {
-    max-height: none;
-}
-
-.navbar .navbar-item.is-search-bar {
-    border-top: 1px solid #d6d6d6;
-    border-bottom: 1px solid #d6d6d6;
-    margin: 0;
-    padding: 0.5rem 1.5rem;
-}
-.navbar .navbar-item:hover a {
-    color: #6b4370;
-}
-.navbar .navbar-item:hover a.sub-link {
-    color: #484848;
-}
 
 .navbar-item .selector {
     position: absolute;
     width: 100%;
     bottom: 0;
+    left:0;
     height: 5px;
 }
-.navbar-item .selector.active {
-    background-color: #0487bf;
-}
-.navbar-item img {
-    max-height: none;
-}
-.navbar-item.is-search-bar {
-    border-top: 1px solid #d6d6d6;
-    border-bottom: 1px solid #d6d6d6;
-    margin: 0;
-    padding: 0.5rem 1.5rem;
+.navbar .navbar-item .selector.active {
+    background-color: #6b4370;
 }
 
-.navbar-item.is-mega {
-    position: static;
-}
-.navbar-item.is-mega .navbar-item {
-    padding-left: 0;
+.navbar-dropdown a {
+    font-weight: normal;
 }
 
-.navbar-item.is-mega .is-mega-menu-title {
-    margin-bottom: 0;
-    padding: 0.375rem 1.5rem;
-    color: #6b4370;
+.sgds-button.search-button{
+    padding: 7px 24px !important;
+    font-size: 15px !important;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+    height: 100%;
 }
-.navbar-dropdown {
-    border-radius: 0;
-    box-shadow: 2px 4px 16px 0 rgba(0, 0, 0, 0.25);
+@media screen and (min-width:1024px){
+    .navbar { 
+        min-height: 6.25rem;
+    }
 }
-
-
 @media screen and (max-width: 1023px) {
 
+    .navbar .field input{
+        border:none;
+    }
+    .navbar .field {
+        border-top: none;
+        border-bottom: none;
+   }
+   .navbar-item.is-search-bar{
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-
-}
-
-@media screen and (min-width: 1280px) {
 }
