@@ -613,3 +613,16 @@ h6, h6 center {
     background-color: #4d3050;
     color: #fff
 }
+
+/* Pagetitle  */
+.sgds-section.is-small.sgds-section-pagetitle{
+    padding-bottom: 2.25rem;
+}
+/* breadcrumbs */
+.sgds-breadcrumb{
+    margin-bottom: 0.625rem;
+}
+.sgds-breadcrumb a{
+    padding: 0.5em .75em;
+    color: white;
+}
