@@ -603,3 +603,13 @@ h6, h6 center {
 .actionbar__inner  a[target="_blank"]:after {
     content: "";
 }
+
+
+/* Bottom-navigation */
+.sgds-bottom-navigation a {
+    background-color: #6b4370;
+}
+.sgds-bottom-navigation a:hover {
+    background-color: #4d3050;
+    color: #fff
+}
