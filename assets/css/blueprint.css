@@ -597,3 +597,9 @@ h6, h6 center {
     min-height: 1.8rem;
     min-width: 1.8rem;
 }
+
+
+/* Actionbar styling */
+.actionbar__inner  a[target="_blank"]:after {
+    content: "";
+}
