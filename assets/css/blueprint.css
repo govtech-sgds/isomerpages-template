@@ -574,9 +574,26 @@ a[href$=".pdf"][target="_blank"]:after {
     .navbar .field {
         border-top: none;
         border-bottom: none;
-   }
+    }
    .navbar-item.is-search-bar{
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
 }
+
+/* Styles for the notification bar for Isomer */
+/* Changing font sizing to Isomer settings */
+
+h6, h6 center {
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+/* Changing the delete button styling */
+.delete{
+    background-color: transparent;
+    max-height: 1.8rem;
+    max-width: 1.8rem;
+    min-height: 1.8rem;
+    min-width: 1.8rem;
 }
