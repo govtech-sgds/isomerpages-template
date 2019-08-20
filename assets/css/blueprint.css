@@ -626,3 +626,40 @@ h6, h6 center {
     padding: 0.5em .75em;
     color: white;
 }
+
+/* sgds-dropdown */
+.sgds-dropdown .sgds-dropdown-trigger button{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    border: solid 1px #d6d6d6;
+}
+
+
+.filter-selector-div{
+    position:relative;
+    display:flex;
+    justify-content: flex-end;
+    border: 1px solid #d6d6d6;
+    height: 3rem;
+    align-items: center;
+}
+.isomer-selector{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    width:100%;
+    font-size: 1.125rem;
+    border: none;
+    background-color: transparent;
+    padding: 0.625rem 0.75rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#filter-arrow {
+    pointer-events: none;
+    padding: 5px
+}
