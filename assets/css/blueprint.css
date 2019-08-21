@@ -663,3 +663,8 @@ h6, h6 center {
     pointer-events: none;
     padding: 5px
 }
+
+.sgds-pagination-link.is-current {
+    background-color: #6b4370;
+    border-color: #6b4370;
+}
