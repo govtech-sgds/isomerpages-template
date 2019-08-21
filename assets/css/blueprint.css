@@ -475,6 +475,7 @@ a:hover {
     width: 100%;
 }
 
+
 .sgds-dropdown .third-level-nav-div-mobile {
     padding-left: 1rem !important;
     display: block;
@@ -500,6 +501,12 @@ a:hover {
 .sgds-button .icon.is-large {
     height: 1.5em;
     width: 1.5em;
+}
+
+.float-buttons .sgds-button{
+    border-color: transparent;
+    box-shadow: none;
+    padding-right: 0;
 }
 
 .sgds-accordion-button {
