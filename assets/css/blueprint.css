@@ -475,7 +475,6 @@ a:hover {
     width: 100%;
 }
 
-
 .sgds-dropdown .third-level-nav-div-mobile {
     padding-left: 1rem !important;
     display: block;
@@ -503,7 +502,7 @@ a:hover {
     width: 1.5em;
 }
 
-.float-buttons .sgds-button{
+.float-buttons .sgds-button {
     border-color: transparent;
     box-shadow: none;
     padding-right: 0;
@@ -550,7 +549,7 @@ a:hover {
     position: absolute;
     width: 100%;
     bottom: 0;
-    left:0;
+    left: 0;
     height: 5px;
 }
 .navbar .navbar-item .selector.active {
@@ -576,43 +575,43 @@ a:hover {
     font-weight: normal;
 }
 
-.sgds-button.search-button{
+.sgds-button.search-button {
     padding: 7px 24px !important;
     font-size: 15px !important;
     letter-spacing: 0.8px;
     font-weight: 600;
     height: 100%;
 }
-@media screen and (min-width:1024px){
-    .navbar { 
+@media screen and (min-width: 1024px) {
+    .navbar {
         min-height: 6.25rem;
     }
 }
 @media screen and (max-width: 1023px) {
-
-    .navbar .field input{
-        border:none;
+    .navbar .field input {
+        border: none;
     }
     .navbar .field {
         border-top: none;
         border-bottom: none;
     }
-   .navbar-item.is-search-bar{
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    .navbar-item.is-search-bar {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 }
 
 /* Styles for the notification bar for Isomer */
 /* Changing font sizing to Isomer settings */
 
-h6, h6 center {
+h6,
+h6 center {
     font-size: 1rem;
     line-height: 1.25rem;
 }
 
 /* Changing the delete button styling */
-.delete{
+.delete {
     background-color: transparent;
     max-height: 1.8rem;
     max-width: 1.8rem;
@@ -620,12 +619,10 @@ h6, h6 center {
     min-width: 1.8rem;
 }
 
-
 /* Actionbar styling */
-.actionbar__inner  a[target="_blank"]:after {
+.actionbar__inner a[target="_blank"]:after {
     content: "";
 }
-
 
 /* Bottom-navigation */
 .sgds-bottom-navigation a {
@@ -633,19 +630,19 @@ h6, h6 center {
 }
 .sgds-bottom-navigation a:hover {
     background-color: #4d3050;
-    color: #fff
+    color: #fff;
 }
 
 /* Pagetitle  */
-.sgds-section.is-small.sgds-section-pagetitle{
+.sgds-section.is-small.sgds-section-pagetitle {
     padding-bottom: 2.25rem;
 }
 /* breadcrumbs */
-.sgds-breadcrumb{
+.sgds-breadcrumb {
     margin-bottom: 0.625rem;
 }
-.sgds-breadcrumb a{
-    padding: 0.5em .75em;
+.sgds-breadcrumb a {
+    padding: 0.5em 0.75em;
     color: white;
 }
 .sgds-breadcrumb a:hover {
@@ -662,32 +659,31 @@ h6, h6 center {
 }
 
 /* sgds-dropdown */
-.sgds-dropdown .sgds-dropdown-trigger{
+.sgds-dropdown .sgds-dropdown-trigger {
     width: 100%;
     border: none;
 }
-.sgds-dropdown .sgds-dropdown-trigger button{
-    width:100%;
-    display:flex;
+.sgds-dropdown .sgds-dropdown-trigger button {
+    width: 100%;
+    display: flex;
     justify-content: space-between;
     border: none;
 }
 
-
-.filter-selector-div{
-    position:relative;
-    display:flex;
+.filter-selector-div {
+    position: relative;
+    display: flex;
     justify-content: flex-end;
     border: 1px solid #d6d6d6;
     height: 3rem;
     align-items: center;
 }
-.isomer-selector{
+.isomer-selector {
     position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    width:100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     font-size: 1.125rem;
     border: none;
     background-color: transparent;
@@ -699,7 +695,7 @@ h6, h6 center {
 
 #filter-arrow {
     pointer-events: none;
-    padding: 5px
+    padding: 5px;
 }
 
 .sgds-pagination-link.is-current {
@@ -707,9 +703,8 @@ h6, h6 center {
     border-color: #6b4370;
 }
 
-
 /* Secondary Buttons */
-.media-category-button{
+.media-category-button {
     text-decoration: none !important;
     color: #323232;
     margin-right: 2.5rem;
@@ -718,7 +713,8 @@ h6, h6 center {
     font-size: 1.125rem;
 }
 
-.media-category-button:hover, .media-category-button.selected {
+.media-category-button:hover,
+.media-category-button.selected {
     color: #6b4370;
     border-bottom: 2px solid #6b4370;
 }
