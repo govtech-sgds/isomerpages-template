@@ -33,12 +33,12 @@ layout: skeleton
     <section class="sgds-section padding--none is-hidden-desktop">
         <div class="sgds-dropdown is-hoverable">
             <div class="sgds-dropdown-trigger">
-                <a class="sgds-button sgds-dropdown-button is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu">
+                <button class="sgds-button sgds-dropdown-button is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu">
                     <span><b><p>{{- page.title -}}</p></b></span>
                     <span class="icon is-small">
                         <i class="sgds-icon sgds-icon-chevron-down is-size-4" aria-hidden="true"></i>
                     </span>
-                </a>
+                </button>
             </div>
             <div class="sgds-dropdown-menu has-text-left hide" id="dropdown-menu" role="menu">
                 <div class="sgds-dropdown-content">
@@ -197,10 +197,10 @@ layout: skeleton
         {%- if page.url == collection_doc.url -%}
             {%- comment -%} If the page is the first in the list {%- endcomment -%}
             {%- if forloop.first and collection[1] -%}
-                <section class="sgds-section bottom-navigation">
+                <section class="sgds-section sgds-bottom-navigation">
                     <div>
                         <a href="{{- collection[1].url -}}" class="is-full is-right">
-                            <p class="has-text-weight-semibold">NEXT <span class="sgds-icon sgds-icon-arrow-right is-size-4"></span></p>
+                            <p class="has-text-weight-semibold">NEXT <span class="sgds-icon sgds-icon-arrow-right is-size-5"></span></p>
                             <p class="is-hidden-mobile">{{- collection[1].title -}}</p>
                         </a>
                     </div>
@@ -210,10 +210,10 @@ layout: skeleton
             {%- elsif forloop.last -%}
                 {%- assign prevIndex = forloop.index0 | minus: 1 -%}
                 {%- if prevIndex > 0 -%}
-                    <section class="sgds-section bottom-navigation">
+                    <section class="sgds-section sgds-bottom-navigation">
                         <div>
                             <a href="{{- collection[prevIndex].url -}}" class="is-full">
-                                <p class="has-text-weight-semibold"><span class="sgds-icon sgds-icon-arrow-left is-size-4"></span> PREVIOUS </p>
+                                <p class="has-text-weight-semibold"><span class="sgds-icon sgds-icon-arrow-left is-size-5"></span> PREVIOUS </p>
                                 <p class="is-hidden-mobile">{{- collection[prevIndex].title -}}</p>
                             </a>
                         </div>
@@ -224,14 +224,14 @@ layout: skeleton
                 {%- assign prevIndex = forloop.index0 | minus: 1 -%}
                 {%- assign nextIndex = forloop.index0 | plus: 1 -%}
 
-                <section class="sgds-section bottom-navigation">
+                <section class="sgds-section sgds-bottom-navigation">
                     <div>
                         <a href="{{- collection[prevIndex].url -}}" class="is-half is-left">
-                            <p class="has-text-weight-semibold"><span class="sgds-icon sgds-icon-arrow-left is-size-4"></span> PREVIOUS </p>
+                            <p class="has-text-weight-semibold"><span class="sgds-icon sgds-icon-arrow-left is-size-5"></span> PREVIOUS </p>
                             <p class="is-hidden-mobile">{{- collection[prevIndex].title -}}</p>
                         </a>
                         <a href="{{- collection[nextIndex].url -}}" class="is-half is-right">
-                            <p class="has-text-weight-semibold">NEXT <span class="sgds-icon sgds-icon-arrow-right is-size-4"></span></p>
+                            <p class="has-text-weight-semibold">NEXT <span class="sgds-icon sgds-icon-arrow-right is-size-5"></span></p>
                             <p class="is-hidden-mobile">{{- collection[nextIndex].title -}}</p>
                         </a>
                     </div>
