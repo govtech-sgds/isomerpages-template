@@ -628,11 +628,15 @@ h6, h6 center {
 }
 
 /* sgds-dropdown */
+.sgds-dropdown .sgds-dropdown-trigger{
+    width: 100%;
+    border: none;
+}
 .sgds-dropdown .sgds-dropdown-trigger button{
     width:100%;
     display:flex;
     justify-content: space-between;
-    border: solid 1px #d6d6d6;
+    border: none;
 }
 
 
