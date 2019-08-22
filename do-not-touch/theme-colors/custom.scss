@@ -45,14 +45,7 @@ $widescreen: 1152px + (4 * $gap) !default;
   }
 }
 
-// Background
-.bg{
-  &-primary{
-    background-color: $primary !important;
-  }
-  &-secondary {
-    background-color: $secondary !important;
-  }
+@mixin themeColor{
   &-media-color {
     &-1 {
       background-color: $media-color-one;
@@ -85,6 +78,17 @@ $widescreen: 1152px + (4 * $gap) !default;
     }
     }
   }
+}
+
+// Background
+.bg{
+  &-primary{
+    background-color: $primary !important;
+  }
+  &-secondary {
+    background-color: $secondary !important;
+  }
+  @include themeColor;
   &-1{
     //background-color: $primary;
     background: url('https://c.stocksy.com/a/YY3500/z0/1205314.jpg') no-repeat left 50%;
@@ -266,10 +270,6 @@ $widescreen: 1152px + (4 * $gap) !default;
       }
     }
   }
-  .navbar-link:hover:after {
-    border-bottom: 1px solid $secondary;
-    border-left: 1px solid $secondary;
-  }
 
   .navbar-item{
     .sub-link.is-active{
@@ -431,4 +431,9 @@ table.table-h {
       opacity: 1;
     }
   }
+}
+
+// Added to fix media-card
+.sgds-card.bg{
+  @include themeColor;
 }
