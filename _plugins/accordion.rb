@@ -16,13 +16,11 @@ module Isomer
       text = super
 			<<~ACCORDION
 			<div class="accordion">
-				<div class="col is-large sgds-accordion-header padding has-icons-right field has-addons is-marginless pointer">
-    			<div class="col is-expanded is-fullwidth is-paddingless">
-    				<h5 class="has-text-grey-dark is-marginless"><b>#{@title}</b></h5>
-    			</div>
-    			<span class="sgds-icon sgds-icon-plus is-size-4 sgds-accordion-button"></span>
+				<div class="sgds-accordion-header padding is-marginless pointer">
+					<h5 class="has-text-grey-dark is-marginless"><b>#{@title}</b></h5>
+    				<span class="sgds-icon sgds-icon-plus is-size-4 sgds-accordion-button"></span>
 				</div>
-				<div class="col padding sgds-accordion-body">
+				<div class="sgds-accordion-body padding">
 					#{markdown_converter.convert(text)}
 				</div>
 			</div>

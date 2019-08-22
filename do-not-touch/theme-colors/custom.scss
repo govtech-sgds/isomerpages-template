@@ -176,6 +176,13 @@ $widescreen: 1152px + (4 * $gap) !default;
 }
 
 //Accordion
+.sgds-accordion-header.pointer {
+  cursor: pointer;
+}
+
+.accordion + .accordion {
+  margin-top: 0.5rem;
+}
 
 .sgds-accordion-button {
   &.sgds-icon-minus {

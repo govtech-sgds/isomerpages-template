@@ -6,17 +6,17 @@ layout: page
 {%- comment -%} Accordion section {%- endcomment -%}
 {%- assign our-journey = site.data.our-journey -%}
 {%- for our-journey-section in our-journey -%}
-	{%- comment -%} Accordion header {%- endcomment -%}
-	<div class="accordion">
-	<div class="col is-large sgds-accordion-header padding has-icons-right field has-addons is-marginless">
-		<div class="col is-expanded is-fullwidth is-paddingless">
-			<h5 class="has-text-grey-dark is-marginless"><b> {{- our-journey-section.title -}}
-			</b></h5>
-		</div>
+
+{%- comment -%} Accordion header {%- endcomment -%}
+<div class="accordion">
+	<div class="sgds-accordion-header padding is-marginless pointer">
+			<h5 class="has-text-grey-dark is-marginless">
+				<b>{{- our-journey-section.title -}}</b>
+			</h5>
 		<span class="sgds-icon sgds-icon-plus is-size-4 sgds-accordion-button"></span>
 	</div>
 	{%- comment -%} Accordion body {%- endcomment -%}
-	<div id="accordion-body-{{forloop.index0}}" class="col padding sgds-accordion-body">
+	<div id="accordion-body-{{forloop.index0}}" class="sgds-accordion-body padding">
 		{%- for year in our-journey-section.years -%}
 			{%- if year.img -%}
 				<div class="sgds-container is-full padding--top--lg padding--bottom" style="width: 100%">
@@ -41,5 +41,6 @@ layout: page
 			{%- if forloop.last == false -%}<hr style="margin-top: 28px">{%- endif -%}
 		{%- endfor -%}
 		<br />
-	</div></div>
+	</div>
+</div>
 {%- endfor -%}
