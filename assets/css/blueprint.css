@@ -417,6 +417,11 @@ a[href$=".pdf"][target="_blank"]:after {
     display: none;
 }
 
+.mobile-nav-dropdown {
+    position: relative;
+    vertical-align: top;
+}
+
 /* 
       ___           ___           ___           ___     
      /\  \         /\  \         /\  \         /\  \    
@@ -553,14 +558,14 @@ a:hover {
     height: 5px;
 }
 
-.navbar-item.is-tab:hover{
+.navbar-item.is-tab:hover {
     border-bottom: none;
-    padding-bottom:5px;
+    padding-bottom: 5px;
     color: #6b4370;
 }
-.navbar-item.is-tab{
+.navbar-item.is-tab {
     border-bottom: none;
-    padding-bottom:5px;
+    padding-bottom: 5px;
 }
 
 .navbar .navbar-item .selector.active {
