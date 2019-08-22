@@ -1,0 +1,86 @@
+<section class="sgds-section is-small padding--bottom--none">
+    <div class="sgds-container padding--top">
+        <div class="row">
+            <div class="col is-three-quarters-desktop is-fullwidth sgds-overflow-buttons ">
+                <div class="sgds-buttons">
+                    {%- if page.layout == "resources" -%}
+                        <span class="sgds-sec-button">
+                            <a href="/{{site.resources_name}}/" class="is-uppercase media-category-button selected">
+                                <b>ALL</b>
+                            </a>
+                        </span>
+                    {%- else -%}
+                        <span class="sgds-sec-button">
+                            <a href="/{{site.resources_name}}/" class="is-uppercase media-category-button">
+                                <b>ALL</b>
+                            </a>
+                        </span>
+                    {%- endif -%}
+
+                    {%- comment -%} Sort resource rooms category alphabetically by name {%- endcomment -%}
+                    {%- assign categories = "" | split: "," -%}
+                    {%- for category in site.categories -%}
+                        {%- if category[0] != site.resources_name -%}
+                            {%- assign categories = categories | push: category[0] -%}
+                        {%- endif -%}
+                    {%- endfor -%}
+                    {%- assign categories = categories | sort_natural -%}
+
+                    {%- for category in categories -%}
+                        {%- if forloop.first and category == site.resources_name -%}
+                            {%- continue -%}
+                        {%- endif -%}
+
+                        {%- capture category_url -%}/{{site.resources_name}}/{{category}}/{%- endcapture -%}
+
+                        {%- if page.url == category_url -%}
+                            <span class="sgds-sec-button">
+                                <a href="{{category_url}}" class="is-uppercase media-category-button selected">
+                                    <b>{{- category | replace: "-", " " | replace: "_", " " -}}</b>
+                                </a>
+                            </span>
+                        {%- else -%}
+                            <span class="sgds-sec-button">
+                                <a href="{{category_url}}" class="is-uppercase media-category-button">
+                                    <b>{{- category | replace: "-", " " | replace: "_", " " -}}</b>
+                                </a>
+                            </span>
+                        {%- endif -%}
+                    {%- endfor -%}
+                </div>
+            </div>
+            {%- comment -%} Display filter for desktop {%- endcomment -%}
+            <div class="col is-one-quarter padding--top padding--left padding--right--sm is-hidden-touch">
+                <div class="filter-selector-div sgds-dropdown">
+                    <!-- <a class="sgds-dropdown-button hero-dropdown is-centered padding--none" aria-haspopup="true" aria-controls="hero-dropdown-menu"> -->
+                    <div class="sgds-dropdown-trigger">
+                        <button class="sgds-button" aria-haspopup="true" aria-controls="sgds-dropdown-menu">
+                                <span class="sgds-selector has-text-black" id="sgds-selector-text-desktop">Recent</span>
+                                <span class="icon">
+                                    <span class="sgds-icon sgds-icon-chevron-down is-size-4 has-text-black" id="filter-arrow"></span>
+                                </span>
+                        </button>
+                    </div>
+                    <div class="sgds-dropdown-menu has-text-left" id="hero-dropdown-menu" role="menu" >
+                      <div id="year-filter-desktop" class="sgds-dropdown-content is-centered">
+                        <a class="sgds-dropdown-item padding--top--sm padding--bottom--none" id="apply-filter-recent">
+                            <p>Recent</p>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {%- comment -%} Display filter for mobile and tablet {%- endcomment -%}     
+            <div class="col is-fullwidth padding--top--lg is-hidden-desktop">
+                <div class="filter-selector-div is-hidden-desktop">
+                    <select id="year-filter-mobile" class="isomer-selector">
+                        <option value="Recent">Recent</option>
+                    </select>
+                    <span class="sgds-icon sgds-icon-chevron-down is-size-4" id="filter-arrow"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

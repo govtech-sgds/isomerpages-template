@@ -1,14 +1,11 @@
 ---
-layout: simple-page
 title: CorpPass
 permalink: /products-and-services/corppass/
 breadcrumb: CorpPass
-collection_name: products-and-services
 tag: business
 thumbnail_image: /images/programmes/products-and-services/CorpPass_ThumbNail.jpg	
 
 ---
-
 CorpPass is a corporate digital identity for businesses and other entities (such as non-profit organisations and associations) to transact with Government agencies online. Owned by the Ministry of Finance and managed by Government Technology Agency (GovTech), CorpPass marks the first time that the Government is rolling out a single corporate digital identity. This creates opportunities for even more services and transactions to be provided online conveniently and securely. 
 
 #### **Greater Convenience, Better Control and Enhanced Privacy**
@@ -20,6 +17,6 @@ Developed in consultation with industry partners and pilot users, CorpPass has b
 
 For more information, please visit the [CorpPass website](http://www.corppass.gov.sg/){:target="_blank"}.
 
-<div class="bp-youtube">
+<div class="sgds-youtube">
   <iframe src="https://www.youtube.com/embed/ifwp4kfYXCk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>  </iframe>
 </div>

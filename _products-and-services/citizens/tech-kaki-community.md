@@ -1,13 +1,10 @@
 ---
-layout: simple-page
 title: Tech Kaki Community
 permalink: /products-and-services/tech-kaki-community/
 breadcrumb: Tech Kaki Community
-collection_name: products-and-services
 tag: citizens
 thumbnail_image: /images/programmes/products-and-services/TechKaki_Thumbnail.png
 ---
-
 We want to solve problems. In fact, we want to solve problems with you!
 
 At GovTech Singapore, we transform the delivery of Government digital services by taking an "outside-in" view, and put users first for our work.

@@ -1,14 +1,11 @@
 ---
-layout: simple-page
 title: Ideas!
 permalink: /products-and-services/ecitizen-ideas/
 breadcrumb: Ideas!
-collection_name: products-and-services
 tag: citizens
 thumbnail_image: /images/programmes/products-and-services/idea's-portal.jpg
       
 ---
-
 The Government has been organising crowdsourcing activities in the form of challenges, such as contests for idea generation, application development, hackathons, to solve problems and issues that Singaporeans may be facing.
 
 [Ideas!](https://ideas.ecitizen.gov.sg/){:target="_blank"} makes it easy and convenient for the public to find and participate in challenges by all Government agencies.  

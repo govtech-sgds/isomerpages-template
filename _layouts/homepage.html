@@ -1,16 +1,18 @@
 ---
-layout: default
+layout: skeleton
 ---
-{%- if page.url == "/" -%}
-	{%- assign notification_content = content | strip_html | strip -%}
+{%- if page.url == "/" and page.notification -%}
+	{%- assign notification_content = page.notification | markdownify | strip_html | strip -%}
 	{%- if notification_content != "" -%}
-		<div id="notification-bar" class="bp-notification bg-secondary is-marginless">
-		    <div class="bp-container">
+		<div id="notification-bar" class="sgds-notification bg-secondary is-marginless">
+		    <div class="sgds-container">
 		        <div class="row">
 		            <div class="col">
-		            	<div class="field has-addons bp-notification-flex">
+		            	<div class="field has-addons sgds-notification-flex">
 			                <div class="control has-text-centered has-text-white">
-			                    {{- content -}}
+			                    <h6>
+									{{- page.notification | strip -}}
+								</h6>
 			                </div>
 			                <div class="control">
 			        			<a id="cancel-notification" class="button has-text-white">
@@ -25,32 +27,91 @@ layout: default
 	{%- endif -%}
 {%- endif -%}
 
-{%- comment -%} Hero mandatory {%- endcomment -%}
-{%- include homepage/hero.html -%}
+{%- assign infopic_isLeft = true -%}
+{%- assign gray_container_class = nil -%}
+{%- assign has_carousel = false -%}
+{%- assign has_resources = false -%}
 
-{%- comment -%} Information sections {%- endcomment -%}
-{%- if site.data.homepage.info-sections -%}
-{%- for section in site.data.homepage.info-sections -%}
-	{%- assign oddEven = forloop.index0 | modulo: 2 -%}
-	{%- if oddEven == 0 -%}
-		{%- include homepage/homepage-info-left.html -%}
-	{%- else -%}
-		{%- include homepage/homepage-info-right.html -%}
+{%- for section in page.sections -%}
+	{%- if forloop.first -%}
+		{%- comment -%} Hero must be the first section {%- endcomment -%}
+		{%- if section.hero -%}
+			{%- include homepage/hero.html -%}
+		{%- else -%}
+			<section class="sgds-section bg-newssection">
+				<div class="sgds-container">
+					<div class="row">
+						<div class="col">
+							<h1>Hero must be the first section!</h1>
+						</div>
+					</div>
+				</div>
+			</section>
+		{%- endif -%}
+	{%- endif -%}
+
+	{%- if section.infobar -%}
+		{%- include homepage/infobar.html -%}
+		{%- include functions/swap_container_class.html -%}
+	{%- endif -%}
+
+	{%- if section.infopic -%}
+		{%- if infopic_isLeft -%}
+			{%- include homepage/infopic_left.html -%}
+			{%- include functions/swap_container_class.html -%}
+			{%- assign infopic_isLeft = false -%}
+		{%- else -%}
+			{%- include homepage/infopic_right.html -%}
+			{%- include functions/swap_container_class.html -%}
+			{%- assign infopic_isLeft = true -%}
+		{%- endif -%}
+	{%- endif -%}
+
+	{%- if section.listing -%}
+		{%- include homepage/listing.html -%}
+		{%- include functions/swap_container_class.html -%}
+	{%- endif -%}
+
+	{%- if section.secondary_cta -%}
+		{%- include homepage/secondary_cta.html -%}
+		{%- include functions/swap_container_class.html -%}
+	{%- endif -%}
+
+	{%- if section.resources -%}
+		{%- if has_resources -%}
+			<section class="sgds-section bg-newssection">
+				<div class="sgds-container">
+					<div class="row">
+						<div class="col">
+							<h1>Each page should only have one resource room</h1>
+						</div>
+					</div>
+				</div>
+			</section>
+		{%- else -%}
+			{%- include homepage/resources.html -%}
+			{%- include functions/swap_container_class.html -%}
+			{%- assign has_resources = true -%}
+		{%- endif -%}
+	{%- endif -%}
+
+	{%- if section.carousel -%}
+		{%- if has_carousel -%}
+			<section class="sgds-section bg-newssection">
+				<div class="sgds-container">
+					<div class="row">
+						<div class="col">
+							<h1>Only 1 carousel is allowed per page.</h1>
+						</div>
+					</div>
+				</div>
+			</section>
+		{%- else -%}
+			{%- comment -%} Carousel only looks nice when itself and the next section both has a gray background {%- endcomment -%}
+			{%- assign gray_container_class = "bg-newssection" -%}
+			{%- comment -%} For inclusion of owl_carousel in main_scripts {%- endcomment -%}
+			{%- assign has_carousel = true -%}
+			{%- include homepage/carousel.html -%}
+		{%- endif -%}
 	{%- endif -%}
 {%- endfor -%}
-{%- endif -%}
-
-{%- comment -%} Programmes homepage toggle {%- endcomment -%}
-{%- if site.homepage_programmes == true -%}
-	{%- include homepage/programmes.html -%}
-{%- endif -%}
-
-{%- comment -%} Resources homepage toggle {%- endcomment -%}
-{%- if site.homepage_resources == true -%}
-	{%- include homepage/resources-homepage.html -%}
-{%- endif -%}
-
-{%- comment -%} Careers homepage toggle {%- endcomment -%}
-{%- if site.homepage_careers == true -%}
-	{%- include homepage/careers.html -%}
-{%- endif -%}

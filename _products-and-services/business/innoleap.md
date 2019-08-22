@@ -1,13 +1,10 @@
 ---
-layout: simple-page
 title: InnoLeap
 permalink: /products-and-services/innoleap/
 breadcrumb: InnoLeap
-collection_name: products-and-services
 tag: business
 thumbnail_image: /images/programmes/products-and-services/InnoLeap-thumbnail.jpg
 ---
-
 ### **Introduction**
 As Singapore moves towards becoming a Smart Nation, GovTech is placing greater emphasis on encouraging the spirit of innovation within the government sector. Today, there are many innovative ideas and solutions developed by Research Institutes (RIs), Institutes of Higher Learning (IHLs), and commercial entities that are looking to solve real-world problems.
 

@@ -1,7 +1,5 @@
 ---
-
 ---
-
 @charset "utf-8";
 
 // HLB brand colors
@@ -47,14 +45,7 @@ $widescreen: 1152px + (4 * $gap) !default;
   }
 }
 
-// Background
-.bg{
-  &-primary{
-    background-color: $primary !important;
-  }
-  &-secondary {
-    background-color: $secondary !important;
-  }
+@mixin themeColor{
   &-media-color {
     &-1 {
       background-color: $media-color-one;
@@ -87,6 +78,17 @@ $widescreen: 1152px + (4 * $gap) !default;
     }
     }
   }
+}
+
+// Background
+.bg{
+  &-primary{
+    background-color: $primary !important;
+  }
+  &-secondary {
+    background-color: $secondary !important;
+  }
+  @include themeColor;
   &-1{
     //background-color: $primary;
     background: url('https://c.stocksy.com/a/YY3500/z0/1205314.jpg') no-repeat left 50%;
@@ -161,21 +163,21 @@ $widescreen: 1152px + (4 * $gap) !default;
 }
 
 // Menu/Left-nav
-.bp-menu-list a.is-active {
+.sgds-menu-list a.is-active {
   color: $secondary !important;
   border-bottom: 2px solid $secondary !important;
   &:hover {
     border-bottom: 2px solid $secondary !important;
   }
 }
-.bp-menu-list a:hover {
+.sgds-menu-list a:hover {
   color: $secondary !important;
   border-bottom: 1px solid $secondary !important;
 }
 
 //Accordion
 
-.bp-accordion-button {
+.sgds-accordion-button {
   &.sgds-icon-minus {
     color: $secondary;
   }
@@ -183,17 +185,17 @@ $widescreen: 1152px + (4 * $gap) !default;
 
 // Button
 
-.bp-button.is-text span {
+.sgds-button.is-text span {
   &:hover, &:focus {
     color: $secondary;
   }
 }
-.bp-button:hover {
+.sgds-button:hover {
   color: $secondary;
 }
 
 // Secondary button
-.bp-sec-button {
+.sgds-sec-button {
   color: $secondary;
   & span {
     border-bottom: 2px solid $secondary !important;
@@ -219,8 +221,27 @@ $widescreen: 1152px + (4 * $gap) !default;
   }
 }
 
-.bp-section.bp-section-pagetitle {
+.sgds-section.sgds-section-pagetitle {
   background-color: $primary !important;
+}
+
+
+.sgds-card{
+  &.bg-media-color-1:hover{
+    background-color: darken($media-color-one, 10%)
+  }
+  &.bg-media-color-2:hover{
+    background-color: darken($media-color-two, 10%)
+  }
+  &.bg-media-color-3:hover{
+    background-color: darken($media-color-three, 10%)
+  }
+  &.bg-media-color-4:hover{
+    background-color: darken($media-color-four, 10%)
+  }
+  &.bg-media-color-5:hover{
+    background-color: darken($media-color-five, 10%)
+  }
 }
 
 // Pagination
@@ -267,10 +288,6 @@ $widescreen: 1152px + (4 * $gap) !default;
         }
       }
     }
-  }
-  .navbar-link:hover:after {
-    border-bottom: 1px solid $secondary;
-    border-left: 1px solid $secondary;
   }
 
   .navbar-item{
@@ -363,7 +380,7 @@ table.table-h {
   }
 }
 
-.bp-image-milestone {
+.sgds-image-milestone {
   border-bottom: solid 4px $secondary;
 }
 
@@ -433,4 +450,9 @@ table.table-h {
       opacity: 1;
     }
   }
+}
+
+// Added to fix media-card
+.sgds-card.bg{
+  @include themeColor;
 }

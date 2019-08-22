@@ -1,10 +1,8 @@
 ---
-layout: leftnav-page-content
 permalink: /application-guidelines/lorem-ipsum-three/
 breadcrumb: Application Guidelines (Lorem Ipsum Three)
 image: "/images/banner_GardenBay.png" 
 title: Lorem Ipsum Three
-collection_name: application-guidelines
 ---
 ### **What is Lorem Ipsum?**
 
@@ -29,7 +27,6 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 * sometimes by accident, sometimes on purpose (injected humour and the like).
 
 ---
-
 A sample download file can be found [here]({{site.baseurl}}/files/guides/guide-new-application.pdf)
 
 For further clarification, please email [dummy_email@dummy.com](mailto:dummy_email@dummy.com).     

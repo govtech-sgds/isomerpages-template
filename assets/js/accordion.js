@@ -1,30 +1,20 @@
-setUpEventListeners();
+const accordionArray = document.getElementsByClassName("accordion");
 
-function setUpEventListeners(){
-	var accordionButtonArray = document.getElementsByClassName("bp-accordion-header");
+for (const accordion of accordionArray) {
+	const toggleAccordionBody = () => {
+		const [accordionBody] = accordion.getElementsByClassName("sgds-accordion-body");
+		const [accordionButton] = accordion.getElementsByClassName("sgds-accordion-button");
 
-	for (var index = 0; index < accordionButtonArray.length; index++) {
-		
-		function callback(){
-			var closureIndex = index;
-			function toggleAccordionBody() {
-			    var accordionBody = document.getElementById("accordion-body-" + closureIndex);
-			    var accordionButtonArray = document.getElementsByClassName("bp-accordion-button");
-			    var accordionButton = accordionButtonArray[closureIndex];
-			    
-			    if (accordionBody.style.display === "" || accordionBody.style.display === "none") {
-			    	accordionBody.style.display = "block";
-			    	accordionButton.classList.remove("sgds-icon-plus");
-			    	accordionButton.classList.add("sgds-icon-minus");
-			    } else {
-			    	accordionBody.style.display = "none";
-			    	accordionButton.classList.remove("sgds-icon-minus");
-			    	accordionButton.classList.add("sgds-icon-plus");
-			    }
-			}
-			return toggleAccordionBody;
+		if (accordionBody.style.display === "" || accordionBody.style.display === "none") {
+			accordionBody.style.display = "block";
+			accordionButton.classList.remove("sgds-icon-plus");
+			accordionButton.classList.add("sgds-icon-minus");
+		} else {
+			accordionBody.style.display = "none";
+			accordionButton.classList.remove("sgds-icon-minus");
+			accordionButton.classList.add("sgds-icon-plus");
 		}
-
-		accordionButtonArray[index].addEventListener("click", callback());
 	}
+
+	accordion.getElementsByClassName("sgds-accordion-header")[0].addEventListener("click", toggleAccordionBody);
 }

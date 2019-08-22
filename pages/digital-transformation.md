@@ -1,10 +1,8 @@
 ---
-layout: simple-page
 title: Digital Transformation
 permalink: /digital-transformation/
 breadcrumb: Digital Transformation
 ---
-
 ### From delivering digital services to developing Singapore into a Smart Nation, GovTech advocates innovative technology to shape the way business is done in the government.
 
 ### **Leading Digital Transformation**

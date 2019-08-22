@@ -1,0 +1,59 @@
+<section class="sgds-section {{ gray_container_class }}">
+    <div class="sgds-container is-fluid">
+        <div class="row">
+            <div class="col is-half is-offset-one-quarter has-text-centered padding--top--xl">
+                {%- if section.infobar.subtitle -%}
+                    <p class="padding--bottom eyebrow is-uppercase">{{- section.infobar.subtitle -}}</p>
+                {%- endif -%}
+
+                {%- if section.infobar.title -%}
+                    <h1 class="has-text-secondary padding--bottom"><b>{{- section.infobar.title -}}</b></h1>
+                {%- endif -%}
+
+                {%- if section.infobar.description -%}
+                    <p>{{- section.infobar.description -}}</p>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+
+    {%- if section.infobar.url and section.infobar.button -%}
+        <div class="row has-text-centered margin--top padding--bottom">
+            <div class="col is-offset-one-third is-one-third">
+                {%- assign url_input = section.infobar.url -%}
+                {%- include functions/external_url.html -%}
+                <a {{anchor}} class="sgds-sec-button">
+                    <div>
+                        <span>{{- section.infobar.button -}}</span>
+                        <i class="sgds-icon sgds-icon-arrow-right is-size-4" aria-hidden="true"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    {%- endif -%}
+</section>
+{%- comment -%}
+<section class="sgds-section bg-hero-bottom">
+    <div class="sgds-container">
+        <div class="row">
+            <div class="col is-8 is-offset-2 has-text-centered padding--top--xl padding--bottom--xl has-text-white">
+                {%- if section.infobar.title -%}
+                    <h1 class="padding--bottom"><b>{{- section.infobar.title -}}</b></h1>
+                {%- endif -%}
+                {%- if section.infobar.subtitle -%}
+                    <p class="padding--bottom--lg">{{- section.infobar.subtitle -}}</p>
+                {%- endif -%}
+                {%- if section.infobar.url and section.infobar.button -%}
+                    {%- assign url_input = section.infobar.url -%}
+                    {%- include functions/external_url.html -%}
+                    <a {{anchor}}>
+                        <div class="bp-button is-white is-outlined is-uppercase search-button">
+                            {{- section.infobar.button -}}
+                        </div>
+                    </a>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+</section>
+{%- endcomment -%}

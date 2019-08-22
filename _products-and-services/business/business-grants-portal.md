@@ -1,13 +1,10 @@
 ---
-layout: simple-page
 title: Business Grants Portal
 permalink: /products-and-services/business-grants-portal/
 breadcrumb: Business Grants Portal
-collection_name: products-and-services
 tag: business
 thumbnail_image: /images/programmes/products-and-services/test.jpg
 ---
-
 The Business Grants Portal (BGP) is a one-stop portal for businesses to apply for grants according to their needs without having to approach multiple agencies. The BGP was officially launched in January 2017. 	
 
 The key features of the BGP are:

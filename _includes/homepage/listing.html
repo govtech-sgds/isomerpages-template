@@ -1,0 +1,55 @@
+<!--<style>
+.isomer-agency-logo {
+  vertical-align: middle;
+  max-height: 60px;
+  @include mobile(){
+    max-width: 300px;
+  }
+}
+.helper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+  .is-hidden-desktop &{
+    justify-content: center;
+  }
+}
+</style>-->
+<section class="sgds-section">
+    <div class="sgds-container">
+        <div class="row">
+            <div class="col is-8 is-offset-2 has-text-centered padding--top--xl">
+                <p class="padding--bottom eyebrow is-uppercase">
+                    {{- section.listing.title -}}
+                </p>
+            </div>
+        </div>
+        <div class="row has-text-centered margin--top padding--bottom is-hidden-touch">
+            <div class="col helper">
+                {%- for entry in section.listing.entries -%}
+                    {%- if entry.url -%}
+                        <a href="{{- site.baseurl -}}{{- entry.url -}}">
+                    {%- endif -%}
+                    <img class="isomer-agency-logo" src="{{ site.baseurl }}{{ entry.image }}" />
+                    {%- if entry.url -%}
+                        </a>
+                    {%- endif -%}
+                {%- endfor -%}
+            </div>
+        </div>
+        <div class="row has-text-centered margin--top padding--bottom is-hidden-desktop">
+            {%- for entry in section.listing.entries -%}
+                <div class="col is-one-fifth helper">
+                    {%- if entry.url -%}
+                        <a href="{{- site.baseurl -}}{{- entry.url -}}">
+                    {%- endif -%}
+                    <img class="isomer-agency-logo" src="{{ site.baseurl }}{{ entry.image }}" />
+                    {%- if entry.url -%}
+                        </a>
+                    {%- endif -%}
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</section>
