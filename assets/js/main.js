@@ -1,9 +1,18 @@
 $(document).ready(function() {
-    var masthead_container = $(".masthead-container");
-    var searchToggle = $("#search-activate");
-    var searchIcon = $("#search-activate span");
-    var searchBar = $(".search-bar");
-    var searchBar_input = $(".search-bar input");
+    initializeSearchToggle();
+    initializeMobileNav();
+    initializeAccordions();
+    // Wrap all tables in a <div> with the horizontal-scroll class so that the
+    // table will not be cut off on mobile
+    $("table").wrap('<div class="horizontal-scroll"></div>');
+});
+
+function initializeSearchToggle() {
+    let masthead_container = $(".masthead-container");
+    let searchToggle = $("#search-activate");
+    let searchIcon = $("#search-activate span");
+    let searchBar = $(".search-bar");
+    let searchBar_input = $(".search-bar input");
     searchToggle.on("click", function(e) {
         e.preventDefault();
         searchIcon.toggleClass("sgds-icon-search").toggleClass("sgds-icon-cross");
@@ -11,6 +20,8 @@ $(document).ready(function() {
         searchBar_input.focus().val("");
         masthead_container.toggleClass("is-opened");
     });
+}
+function initializeMobileNav() {
     // Custom dropdown code for mobile browsers
     const dropdowns = document.querySelectorAll(".mobile-nav-dropdown");
     if (dropdowns.length > 0) {
@@ -45,8 +56,30 @@ $(document).ready(function() {
             }
         });
     }
+}
+function initializeAccordions() {
+    const accordionArray = document.getElementsByClassName("accordion");
+    for (const accordion of accordionArray) {
+        const toggleAccordionBody = () => {
+            const [accordionHeader] = accordion.getElementsByClassName("sgds-accordion-header");
+            const [accordionBody] = accordion.getElementsByClassName("sgds-accordion-body");
+            const [accordionButton] = accordion.getElementsByClassName("sgds-accordion-button");
 
-    // Wrap all tables in a <div> with the horizontal-scroll class so that the
-    // table will not be cut off on mobile
-    $("table").wrap('<div class="horizontal-scroll"></div>');
-});
+            if (accordionBody.style.display === "" || accordionBody.style.display === "none") {
+                accordionHeader.classList.add("is-active");
+                accordionBody.style.display = "block";
+                accordionButton.classList.remove("sgds-icon-plus");
+                accordionButton.classList.add("sgds-icon-minus");
+            } else {
+                accordionHeader.classList.remove("is-active");
+                accordionBody.style.display = "none";
+                accordionButton.classList.remove("sgds-icon-minus");
+                accordionButton.classList.add("sgds-icon-plus");
+            }
+        };
+
+        accordion
+            .getElementsByClassName("sgds-accordion-header")[0]
+            .addEventListener("click", toggleAccordionBody);
+    }
+}
